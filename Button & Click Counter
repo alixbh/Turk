@@ -11,8 +11,8 @@
         		document.getElementById("clicker2").innerHTML = clicker;
     		};
     	</script>
-    	<button type="button" onclick="clickcount()">Click when you hear a 4 word sentence</button>
-    	<p>No. of 4-word Sentences: <a id="clicker2">0</a></p>	
+    	<button type="button" onclick="clickcount()">buttontexthere</button>
+    	<p>Text for what you are counting: <a id="clicker2">0</a></p>	
 
     </body>
 
