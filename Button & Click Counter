@@ -1,0 +1,36 @@
+//want to make a button and record in trialdata.csv how many times the user clicks the button? 
+//relies on the use of a submit button... more code for submit button may be elsewhere
+
+//put this html in your condition file 
+<body>
+    	<script type="text/javascript">
+
+    		var clicker = 0;
+    		function clickcount() {
+    			clicker += 1;
+        		document.getElementById("clicker2").innerHTML = clicker;
+    		};
+    	</script>
+    	<button type="button" onclick="clickcount()">Click when you hear a 4 word sentence</button>
+    	<p>No. of 4-word Sentences: <a id="clicker2">0</a></p>	
+
+    </body>
+
+    			<button id="submitButton" class="btn btn-default" type="button">Submit</button>
+
+
+//put this code into your task.js file 
+var next = function(record){
+  if (phase === "phase") {
+  		$("#submitButton").unbind("click");
+  		$("#submitButton").click(function (e) {
+  			var numclicks = clicker2.innerHTML;
+  			console.log("You have "+numclicks+" cats!");
+  			record.user_clicks = numclicks;
+  			psiTurk.recordTrialData(record);
+  			psiTurk.saveData();
+  			do_next_phase();
+  			console.log("do next phase happens.")
+  			});
+  		}		
+}
